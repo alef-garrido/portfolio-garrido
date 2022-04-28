@@ -1,12 +1,6 @@
-:root {
-  --primary-txt-size: calc(10px + 2vmin);
-  --primary-black: #181913;
-  --primary-white: #ecede7;
-  --accent-color: #009f8e;
-}
+@use './abstracts' as *;
 
 /* RESETS */
-
 *,
 *::before,
 *::after {
@@ -25,7 +19,7 @@ body {
 }
 
 body {
-  background-color: var(--primary-black);
+  background-color: $primary-black;
   line-height: 1.5;
   min-height: 100vh;
   text-rendering: optimizeSpeed;

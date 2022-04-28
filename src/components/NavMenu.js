@@ -1,3 +1,5 @@
+import { HiOutlineMenuAlt4 } from 'react-icons/hi';
+
 function NavMenu() {
   return (
     <nav className="pageNav">
@@ -15,6 +17,9 @@ function NavMenu() {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="menu--mobile">
+        <HiOutlineMenuAlt4 />
       </div>
     </nav>
   );

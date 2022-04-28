@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '../Logo';
 import NavMenu from '../NavMenu';
 import ContactBox from '../ContacBox';
-import '../../styles/nav.scss';
+import '../../scss/nav.scss';
 
 function Nav() {
   return (
