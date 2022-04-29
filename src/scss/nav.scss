@@ -146,11 +146,9 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
-  .app--container {
-    position: relative;
-  }
-
   .header {
+    // position: relative;
+    width: 100vmin;
     display: flex;
     align-items: center;
     overflow-y: scroll;
@@ -162,16 +160,15 @@
     margin: 2rem 0;
   }
 
-  .nav--content,
+  .nav--container,
   .navMenu--container,
   .contact--container {
     display: none;
   }
 
-  .pageNav {
-    position: relative;
-    width: 100vmin;
-    height: auto;
+  .nav--mobile-container {
+    display: block;
+    height: 3rem;
   }
 
   .menu--mobile-bttn {
@@ -180,38 +177,78 @@
     width: 50px;
     height: 50px;
     right: 10px;
-    top: 0;
+    top: 1rem;
     left: auto;
     bottom: auto;
-    color: $primary-white;
     border: none;
-    background-color: transparent;
-  }
+    background-color: $primary-white;
 
-  .menu--mobile svg {
-    margin: 0 auto;
+    svg {
+      color: $primary-black;
+      margin: 0 auto;
+    }
   }
 
   .mobile--menu {
-    position: static;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    padding: 1.5rem;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $primary-white;
-    width: 100%;
-    height: 100vh;
-    color: $primary-black;
-    z-index: 3;
+    background-color: $primary-black;
+    color: $primary-white;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    animation: fadein 0.5s;
+
+    ul {
+      text-align: left;
+      list-style: none;
+      margin-top: 2rem;
+
+      li {
+        border-bottom: 1px solid $opacity-white;
+        margin: 1rem 0;
+        padding: 1rem 0;
+
+        a {
+          text-decoration: none;
+          color: $primary-white;
+        }
+      }
+    }
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .mobile--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .menu--mobile-closeBttn {
-    float: right;
+    align-self: flex-end;
     border: none;
+    color: $primary-white;
+    background-color: transparent;
+
 
     svg {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
     }
   }
 }
