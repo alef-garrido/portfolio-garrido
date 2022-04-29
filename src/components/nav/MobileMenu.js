@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { AiOutlineCloseSquare } from 'react-icons/ai';
-import logo from '../assets/logo.svg';
+import logo from '../../assets/logo.svg';
 
 function MobileMenu(props) {
   const { clickHandler } = props;

@@ -1,9 +1,9 @@
 import React from 'react';
-import Logo from '../Logo';
-import NavMenu from '../NavMenu';
-import ContactBox from '../ContacBox';
-import NavContent from '../NavContent';
-import '../../scss/nav.scss';
+import Logo from './nav/Logo';
+import NavMenu from './nav/NavMenu';
+import ContactBox from './nav/ContacBox';
+import NavContent from './nav/NavContent';
+import '../scss/nav.scss';
 
 function Nav() {
   return (
