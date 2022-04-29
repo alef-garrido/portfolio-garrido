@@ -1,0 +1,253 @@
+@use './abstracts/' as *;
+
+.header--container {
+  position: relative;
+  width: 90%;
+  padding: 2rem 0;
+  overflow-x: hidden;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  left: 0%;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 17% 50% 33%;
+}
+
+.logo--container {
+  text-align: left;
+}
+
+.nav--container {
+  padding-bottom: 20px;
+}
+
+.nav--mobile-container {
+  display: none;
+}
+
+.menu--mobile {
+  display: none;
+}
+
+.navlist--container {
+  padding: 0;
+  font-size: 16px;
+  list-style: none;
+  text-align: left;
+}
+
+.nav--link {
+  margin-bottom: 18px;
+  padding-left: 18px;
+  background-image: url('../assets/decoration-nav.svg');
+  background-repeat: no-repeat;
+  background-size: 0;
+  background-position: 6px 50%;
+
+  a {
+    color: $primary-white;
+    text-decoration: none;
+    font-family: $text-ff;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+  }
+}
+
+.last {
+  margin-bottom: 0;
+}
+
+.nav--link:hover {
+  background-size: 12px;
+  background-position: 0 50%;
+}
+
+.deco-current {
+  background-size: 12px;
+  background-position: 0 50%;
+}
+
+.contact--container {
+  font-size: 16px;
+  justify-self: end;
+}
+
+.bttn-nav {
+  padding-left: 15px;
+  color: $primary-white;
+  text-decoration: none;
+  font-family: $text-ff;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  border: none;
+  margin: 0;
+  font-size: 16px;
+}
+
+.chatBtn {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  margin-left: 5rem;
+  border: none;
+  text-align: left;
+  font-family: $bttn-ff;
+  font-weight: 900;
+  background-color: transparent;
+
+  a {
+    text-decoration: none;
+    color: $primary-white;
+  }
+}
+
+.chatBtn a:hover {
+  color: $hover-color;
+}
+
+.lines {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url('../assets/decoration-nav.svg');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.nav--border {
+  right: 25%;
+}
+
+.border-lines {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 1px;
+  height: 1px;
+  background-color: $primary-white;
+}
+
+.nav--border-1 {
+  height: 200px;
+}
+
+.nav--border-2 {
+  width: 900px;
+}
+
+.nav--border-3 {
+  width: 400px;
+  left: 20px;
+  right: auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .header {
+    // position: relative;
+    width: 100vmin;
+    display: flex;
+    align-items: center;
+    overflow-y: scroll;
+  }
+
+  .logo--container {
+    width: 50vw;
+    position: absolute;
+    margin: 2rem 0;
+  }
+
+  .nav--container,
+  .navMenu--container,
+  .contact--container {
+    display: none;
+  }
+
+  .nav--mobile-container {
+    display: block;
+    height: 3rem;
+  }
+
+  .menu--mobile-bttn {
+    position: absolute;
+    display: inline;
+    width: 50px;
+    height: 50px;
+    right: 10px;
+    top: 1rem;
+    left: auto;
+    bottom: auto;
+    border: none;
+    background-color: $primary-white;
+
+    svg {
+      color: $primary-black;
+      margin: 0 auto;
+    }
+  }
+
+  .mobile--menu {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    padding: 1.5rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $primary-black;
+    color: $primary-white;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    animation: fadein 0.5s;
+
+    ul {
+      text-align: left;
+      list-style: none;
+      margin-top: 2rem;
+
+      li {
+        border-bottom: 1px solid $opacity-white;
+        margin: 1rem 0;
+        padding: 1rem 0;
+
+        a {
+          text-decoration: none;
+          color: $primary-white;
+        }
+      }
+    }
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .mobile--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu--mobile-closeBttn {
+    align-self: flex-end;
+    border: none;
+    color: $primary-white;
+    background-color: transparent;
+
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

@@ -1,13 +1,15 @@
 import React from 'react';
-import Logo from '../Logo';
-import NavMenu from '../NavMenu';
-import ContactBox from '../ContacBox';
-import '../../styles/nav.scss';
+import Logo from './nav/Logo';
+import NavMenu from './nav/NavMenu';
+import ContactBox from './nav/ContacBox';
+import NavContent from './nav/NavContent';
+import '../scss/nav.scss';
 
 function Nav() {
   return (
-    <header id="home" className="header">
+    <header id="home" className="header--container">
       <Logo />
+      <NavContent />
       <NavMenu />
       <ContactBox />
       <div className="lines nav--border">
