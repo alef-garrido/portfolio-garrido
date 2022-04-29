@@ -1,9 +1,9 @@
-@use './abstracts' as *;
+@use './abstracts/' as *;
 
-.header {
+.header--container {
   position: relative;
   width: 90%;
-  padding: 1rem 0;
+  padding: 2rem 0;
   overflow-x: hidden;
   top: 0%;
   right: 0%;
@@ -11,30 +11,27 @@
   left: 0%;
   z-index: 2;
   display: grid;
-  grid-template-columns: 15% 60% 25%;
-}
-
-.pageNav {
-  position: relative;
-}
-
-.nav--content {
-  padding-bottom: 50px;
+  grid-template-columns: 17% 50% 33%;
 }
 
 .logo--container {
   text-align: left;
 }
 
+.nav--container {
+  padding-bottom: 20px;
+}
+
+.nav--mobile-container {
+  display: none;
+}
+
 .menu--mobile {
   display: none;
 }
 
-.navMenu--container {
-  padding: 0 3rem;
-}
-
-.navMenu--container ul {
+.navlist--container {
+  padding: 0;
   font-size: 16px;
   list-style: none;
   text-align: left;
@@ -47,6 +44,14 @@
   background-repeat: no-repeat;
   background-size: 0;
   background-position: 6px 50%;
+
+  a {
+    color: $primary-white;
+    text-decoration: none;
+    font-family: $text-ff;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+  }
 }
 
 .last {
@@ -68,14 +73,15 @@
   justify-self: end;
 }
 
-.contact--container p {
-  padding-left: 15px;
-}
-
 .bttn-nav {
+  padding-left: 15px;
+  color: $primary-white;
+  text-decoration: none;
+  font-family: $text-ff;
+  font-weight: 600;
+  letter-spacing: 1.5px;
   border: none;
   margin: 0;
-  padding-left: 18px;
   font-size: 16px;
 }
 
@@ -86,8 +92,14 @@
   margin-left: 5rem;
   border: none;
   text-align: left;
-  font-family: 'Biryani', sans-serif;
+  font-family: $bttn-ff;
   font-weight: 900;
+  background-color: transparent;
+
+  a {
+    text-decoration: none;
+    color: $primary-white;
+  }
 }
 
 .chatBtn a:hover {
@@ -107,7 +119,7 @@
 }
 
 .nav--border {
-  right: 30%;
+  right: 25%;
 }
 
 .border-lines {
@@ -124,7 +136,7 @@
 }
 
 .nav--border-2 {
-  width: 800px;
+  width: 900px;
 }
 
 .nav--border-3 {
@@ -134,30 +146,72 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
+  .app--container {
+    position: relative;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    overflow-y: scroll;
+  }
+
   .logo--container {
     width: 50vw;
     position: absolute;
     margin: 2rem 0;
   }
 
+  .nav--content,
   .navMenu--container,
   .contact--container {
     display: none;
   }
 
   .pageNav {
+    position: relative;
     width: 100vmin;
+    height: auto;
   }
 
-  .menu--mobile {
+  .menu--mobile-bttn {
     position: absolute;
     display: inline;
     width: 50px;
     height: 50px;
     right: 10px;
-    top: 10px;
+    top: 0;
     left: auto;
     bottom: auto;
     color: $primary-white;
+    border: none;
+    background-color: transparent;
+  }
+
+  .menu--mobile svg {
+    margin: 0 auto;
+  }
+
+  .mobile--menu {
+    position: static;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $primary-white;
+    width: 100%;
+    height: 100vh;
+    color: $primary-black;
+    z-index: 3;
+  }
+
+  .menu--mobile-closeBttn {
+    float: right;
+    border: none;
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
   }
 }

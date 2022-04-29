@@ -1,1 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'neue-displayBlack';
+  src: url('../fonts/NeueHaasDisplayBlack.ttf');
+}
+
+@font-face {
+  font-family: 'neue-displayRoman';
+  src: url('../fonts/NeueHaasDisplayRoman.ttf');
+}
+
+$title-ff: 'neue-haas-grotesk-displayBlack', sans-serif;
+$text-ff: 'neue-displayRoman', sans-serif;
+$bttn-ff: 'Biryani', sans-serif;
 $primary-txt-size: calc(10px + 2vmin);

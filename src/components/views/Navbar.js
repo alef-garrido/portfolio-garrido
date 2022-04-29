@@ -2,12 +2,14 @@ import React from 'react';
 import Logo from '../Logo';
 import NavMenu from '../NavMenu';
 import ContactBox from '../ContacBox';
+import NavContent from '../NavContent';
 import '../../scss/nav.scss';
 
 function Nav() {
   return (
-    <header id="home" className="header">
+    <header id="home" className="header--container">
       <Logo />
+      <NavContent />
       <NavMenu />
       <ContactBox />
       <div className="lines nav--border">
