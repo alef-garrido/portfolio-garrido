@@ -1,0 +1,89 @@
+@use './abstracts/' as *;
+
+.hero--section {
+  width: 90%;
+  margin-top: 4rem;
+  padding: 1rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .hero-title {
+    color: $primary-white;
+    font-family: $title-ff;
+    font-size: 6vmin;
+    line-height: 6rem;
+    z-index: 1;
+
+    .title-lighter {
+      font-size: 11vmin;
+      font-weight: 300;
+    }
+
+    .title--accent {
+      font-size: 12vmin;
+      font-weight: 600;
+      margin-left: 20%;
+    }
+
+    .title-lighter-sub {
+      font-size: 11vmin;
+    }
+
+    .title--accent-sub {
+      font-size: 12vmin;
+      padding-left: 37%;
+    }
+  }
+
+  .hero--deco {
+    display: flex;
+    gap: 5vmin;
+    justify-content: center;
+    z-index: 0;
+
+    .deco-left {
+      width: 15vmin;
+      height: 70vmin;
+      margin-top: 3rem;
+      background-image: url('../assets/hero-backg-left.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .deco-right {
+      position: relative;
+      width: 39vmin;
+      height: auto;
+      justify-self: flex-end;
+      margin-top: -23px;
+      background-image: url('../assets/hero-backg-right.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .hero-star {
+    position: absolute;
+    right: -40px;
+    top: 10rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 968px) {
+  .hero--section {
+    display: flex;
+    flex-direction: column;
+    gap: 1vmin;
+    margin-top: 2rem;
+    padding: 1rem 0;
+  }
+
+  .hero-title * {
+    font-size: 11vmin;
+    line-height: 11vmin;
+  }
+
+  .hero--deco {
+    margin-top: -2%;
+  }
+}

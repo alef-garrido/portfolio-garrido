@@ -28,6 +28,7 @@
 
 .menu--mobile {
   display: none;
+  z-index: 2;
 }
 
 .navlist--container {
@@ -145,7 +146,7 @@
   right: auto;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 968px) {
   .header {
     // position: relative;
     width: 100vmin;
@@ -159,6 +160,14 @@
     position: absolute;
     margin: 2rem 0;
   }
+
+  // .nav--border-2 {
+  //   width: ;
+  // }
+
+  // .nav--border-3 {
+  //   width: 100px;
+  // }
 
   .nav--container,
   .navMenu--container,
@@ -200,7 +209,7 @@
     left: 0;
     background-color: $primary-black;
     color: $primary-white;
-    z-index: 1;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     animation: fadein 0.5s;
