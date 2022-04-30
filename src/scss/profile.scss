@@ -1,48 +1,5 @@
 @use './abstracts/' as *;
 
-.profile--container {
-  width: 90%;
-  overflow: hidden;
-  position: relative;
-
-  .p-lines {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background-image: url('../assets/decoration-nav.svg');
-    background-position: 50% 50%;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-
-  .profile--border {
-    left: 380px;
-  }
-
-  .profile-lines {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    width: 1px;
-    height: 1px;
-    background-color: $primary-white;
-  }
-
-  .line-1 {
-    height: 200px;
-  }
-
-  .line-2 {
-    width: 980px;
-  }
-
-  .line-3 {
-    width: 502px;
-    left: auto;
-    right: 10px;
-  }
-}
-
 .profile--content {
   display: grid;
   grid-template-columns: 45% 55%;
@@ -70,9 +27,9 @@
 
 .profile--title h5 {
   margin: 0;
-  padding-bottom: 1.25em;
-  font-family: $text-ff;
-  font-size: 1.25rem;
+  padding-bottom: 1rem;
+  font-family: $title-ff;
+  font-size: 1.2rem;
   letter-spacing: 0.5px;
   font-weight: 800;
 }
@@ -93,34 +50,81 @@
   font-family: $text-ff;
 }
 
+@media screen and (min-width: 969px) {
+  .profile--container {
+    width: 90%;
+    overflow: hidden;
+    position: relative;
+
+    .p-lines {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-image: url('../assets/decoration-nav.svg');
+      background-position: 50% 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .profile--border {
+      left: 380px;
+    }
+
+    .profile-lines {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      width: 1px;
+      height: 1px;
+      background-color: $primary-white;
+    }
+
+    .line-1 {
+      height: 200px;
+    }
+
+    .line-2 {
+      width: 980px;
+    }
+
+    .line-3 {
+      width: 502px;
+      left: auto;
+      right: 10px;
+    }
+  }
+}
+
 @media screen and (min-width: 320px) and (max-width: 968px) {
+  .profile--container {
+    width: 90%;
+    position: relative;
+    overflow-x: hidden;
+    margin-top: 2rem;
+  }
+
   .profile--content {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    margin-top: 5rem;
-    gap: 5vmin;
+    padding: 0.5rem;
+    margin-top: 2.5rem;
+    gap: 7vmin;
   }
 
   .p-lines {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    background-image: url('../assets/decoration-nav.svg');
-    background-position: 50% 50%;
-    background-size: contain;
-    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/decoration-nav10.svg');
   }
 
   .profile--border {
-    left: 80px;
+    right: 4rem;
   }
 
   .profile-lines {
     position: absolute;
-    left: 20px;
-    top: 20px;
-    width: 1px;
+    top: 10px;
     height: 1px;
     background-color: $primary-white;
   }
@@ -134,9 +138,9 @@
   }
 
   .line-3 {
-    width: 52px;
-    left: 50px;
-    right: 100px;
+    width: 300px;
+    left: auto;
+    right: 1rem;
   }
 
   .profile--pic {
@@ -144,7 +148,23 @@
     padding-left: 0;
   }
 
+  .profile--title {
+    align-self: flex-end;
+  }
+
+  .profile--title h5 {
+    font-size: 1.3rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .profile--title p {
+    font-family: $bttn-ff;
+    font-weight: 200;
+  }
+
   .profile--summary {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    text-indent: 100px;
+    text-align: justify;
   }
 }
