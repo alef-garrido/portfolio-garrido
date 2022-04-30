@@ -1,0 +1,150 @@
+@use './abstracts/' as *;
+
+.profile--container {
+  width: 90%;
+  overflow: hidden;
+  position: relative;
+
+  .p-lines {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url('../assets/decoration-nav.svg');
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .profile--border {
+    left: 380px;
+  }
+
+  .profile-lines {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 1px;
+    height: 1px;
+    background-color: $primary-white;
+  }
+
+  .line-1 {
+    height: 200px;
+  }
+
+  .line-2 {
+    width: 980px;
+  }
+
+  .line-3 {
+    width: 502px;
+    left: auto;
+    right: 10px;
+  }
+}
+
+.profile--content {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  padding: 6rem 4rem;
+}
+
+.profile--pic {
+  padding-left: 1rem;
+  align-self: start;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: $primary-white;
+  text-align: right;
+}
+
+.profile--pic img {
+  width: 96px;
+}
+
+.profile--title {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.profile--title h5 {
+  margin: 0;
+  padding-bottom: 1.25em;
+  font-family: $text-ff;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
+
+.profile--title p {
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
+.profile--summary {
+  text-indent: 50px;
+  align-self: start;
+  font-size: 1.45em;
+  text-align: left;
+  font-weight: 300;
+  line-height: 150%;
+  color: $primary-white;
+  font-family: $text-ff;
+}
+
+@media screen and (min-width: 320px) and (max-width: 968px) {
+  .profile--content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-top: 5rem;
+    gap: 5vmin;
+  }
+
+  .p-lines {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url('../assets/decoration-nav.svg');
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .profile--border {
+    left: 80px;
+  }
+
+  .profile-lines {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 1px;
+    height: 1px;
+    background-color: $primary-white;
+  }
+
+  .line-1 {
+    height: 0;
+  }
+
+  .line-2 {
+    width: 80px;
+  }
+
+  .line-3 {
+    width: 52px;
+    left: 50px;
+    right: 100px;
+  }
+
+  .profile--pic {
+    justify-self: flex-start;
+    padding-left: 0;
+  }
+
+  .profile--summary {
+    font-size: 1.1rem;
+  }
+}
