@@ -1,27 +1,28 @@
 @use './abstracts/' as *;
 
 .hero--section {
-  width: 85%;
+  width: 90%;
   margin-top: 4rem;
+  padding: 1rem 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-
 
   .hero-title {
     color: $primary-white;
     font-family: $title-ff;
-    font-size: 5vmin;
+    font-size: 6vmin;
     line-height: 6rem;
-    z-index: 2;
+    z-index: 1;
 
     .title-lighter {
+      font-size: 11vmin;
       font-weight: 300;
     }
 
     .title--accent {
-      font-size: 11vmin;
+      font-size: 12vmin;
       font-weight: 600;
-      padding-left: 10%;
+      margin-left: 20%;
     }
 
     .title-lighter-sub {
@@ -30,7 +31,7 @@
 
     .title--accent-sub {
       font-size: 12vmin;
-      padding-left: 25%;
+      padding-left: 37%;
     }
   }
 
@@ -38,10 +39,10 @@
     display: flex;
     gap: 5vmin;
     justify-content: center;
-    z-index: 1;
+    z-index: 0;
 
     .deco-left {
-      width: 19vmin;
+      width: 15vmin;
       height: 70vmin;
       margin-top: 3rem;
       background-image: url('../assets/hero-backg-left.png');
@@ -51,8 +52,9 @@
 
     .deco-right {
       position: relative;
-      width: 50vmin;
+      width: 39vmin;
       height: auto;
+      justify-self: flex-end;
       margin-top: -23px;
       background-image: url('../assets/hero-backg-right.png');
       background-repeat: no-repeat;
@@ -71,9 +73,17 @@
   .hero--section {
     display: flex;
     flex-direction: column;
+    gap: 1vmin;
+    margin-top: 2rem;
+    padding: 1rem 0;
   }
-  
+
   .hero-title * {
-    line-height: 3rem;
+    font-size: 11vmin;
+    line-height: 11vmin;
+  }
+
+  .hero--deco {
+    margin-top: -2%;
   }
 }
