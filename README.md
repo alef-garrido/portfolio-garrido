@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-[Live Demo](URL)Not deployed yet!
+[Live Demo](https://astounding-stardust-e45535.netlify.app/)
 
 ## Getting Started
 
