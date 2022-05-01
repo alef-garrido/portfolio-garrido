@@ -1,15 +1,31 @@
 import '../scss/projects.scss';
-import cover1 from '../assets/thumbnails/thumbnail-1.jpg';
+import { projectReact } from '../data/projectsObj';
 
 function Projects() {
+  const cnt = 0;
+  const project = projectReact[cnt];
+  const {
+    cover,
+    thumbnail,
+    title,
+    description,
+    tags,
+    link,
+  } = project;
   return (
     <section className="projects--container">
-      <div className="project-thumbnail-full" />
+      <div className="project-thumbnail-full">
+        <img alt="" src={cover} />
+      </div>
       <div className="project-miniature">
-        <img alt="" src={cover1} className="cover--display" />
+        <img alt="" src={thumbnail} className="cover--display" />
         <div className="miniature--title">
-          <h5>Title</h5>
-          <p>This is a paragraph wit info</p>
+          <h5>{title}</h5>
+          <p>{description}</p>
+        </div>
+        <div className="miniature--details">
+          <small>{tags.map((i) => i)}</small>
+          <a href={link}>see +</a>
         </div>
       </div>
     </section>
