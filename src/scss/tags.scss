@@ -41,3 +41,20 @@
     }
   }
 }
+
+@media screen and (min-width: 320px) and (max-width: 968px) {
+  .project--tags {
+    grid-row: 2 / 3;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    .last {
+      margin-right: 0;
+    }
+  }
+
+  .bttn-tag {
+    font-size: 0.8rem;
+  }
+}

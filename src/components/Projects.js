@@ -1,5 +1,6 @@
 import '../scss/projects.scss';
 import { projectReact } from '../data/projectsObj';
+import Tags from './projects/Tags';
 import Miniature from './projects/Miniature';
 
 function Projects() {
@@ -12,6 +13,7 @@ function Projects() {
         <img alt="" src={project.cover} />
       </div>
       <Miniature data={project} />
+      <Tags />
     </section>
 
   );

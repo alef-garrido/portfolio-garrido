@@ -11,7 +11,7 @@ function Tags() {
         <span className="bttn-deco">&nbsp;</span>
         React
       </div>
-      <div className="bttn-tag">
+      <div className="bttn-tag last">
         <span className="bttn-deco">&nbsp;</span>
         Blockchain
       </div>
