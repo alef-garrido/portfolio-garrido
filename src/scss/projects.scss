@@ -24,7 +24,6 @@
 
     img {
       width: 100%;
-      // height: auto;
     }
   }
 
@@ -61,8 +60,9 @@
   .projects--content {
     width: 100%;
     display: grid;
+    padding: 0%;
     grid-template-rows: 1fr 100px;
-    gap: 24rem;
+    gap: 79vmax;
 
     .project-thumbnail-full img {
       width: 100%;
@@ -74,7 +74,7 @@
       grid-row: 1 / 2;
       width: 70%;
       padding: 1.5rem;
-      margin-top: 5rem;
+      margin-top: 29vmax;
       top: 100%;
       left: 50%;
       margin-right: -50%;
