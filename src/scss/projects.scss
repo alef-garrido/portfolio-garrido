@@ -1,15 +1,79 @@
+@use './abstracts/' as *;
+
 .projects--container {
+  position: relative;
   width: 90%;
   margin: 6rem 0;
 
   .project-thumbnail-full {
     width: 100%;
-    height: auto;
+    height: 650px;
+    background-image: url('../assets/thumbnails/thumbnail-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .project-miniature {
+    position: absolute;
+    width: 30%;
+    top: 10rem;
+    right: 4rem;
+    bottom: auto;
+    left: auto;
+    background-color: $primary-black;
+    border: solid 1px $primary-white;
+    padding: 2rem;
+  }
+
+  .miniature--title {
+    color: $primary-white;
+
+    h5 {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin-top: 0.5rem;
+      text-align: justify;
+    }
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 968px) {
   .projects--container {
     width: 100%;
+
+    .project-thumbnail-full {
+      width: 100%;
+      height: 80vmin;
+      background-image: url('../assets/thumbnails/thumbnail-1.jpg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+    }
+
+    .project-miniature {
+      width: 70%;
+      padding: 1.5rem;
+      margin-top: 8rem;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+
+      .miniature--title {
+        color: $primary-white;
+
+        h5 {
+          margin-top: 2rem;
+          font-size: 1.5rem;
+        }
+
+        p {
+          margin-top: 0.5rem;
+        }
+      }
+    }
   }
 }
