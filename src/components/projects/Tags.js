@@ -5,15 +5,15 @@ function Tags() {
     <div className="project--tags">
       <div className="bttn-tag">
         <span className="bttn-deco">&nbsp;</span>
-        JavaScript
+        Static-Page
       </div>
       <div className="bttn-tag">
         <span className="bttn-deco">&nbsp;</span>
-        React
+        SPAs
       </div>
       <div className="bttn-tag last">
         <span className="bttn-deco">&nbsp;</span>
-        Blockchain
+        Dapps
       </div>
     </div>
   );
