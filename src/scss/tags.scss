@@ -1,0 +1,60 @@
+@use './abstracts/' as *;
+
+.project--tags {
+  color: $primary-white;
+  font-family: $bttn-ff;
+  align-self: flex-start;
+  padding: 1rem 4rem;
+  display: flex;
+
+  .bttn-deco {
+    color: white;
+    width: 13px;
+    height: 13px;
+    margin-right: 0.5em;
+    background-image: url(../assets/decoration-nav10.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 13px;
+  }
+
+  .bttn-tag {
+    display: flex;
+    margin-right: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    align-items: center;
+    color: white;
+    border: white solid 1px;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+      background: white;
+      color: #181913;
+
+      .bttn-deco {
+        background-image: url(../assets/decoration-nav10-black.svg);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 968px) {
+  .project--tags {
+    grid-row: 2 / 3;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    .last {
+      margin-right: 0;
+    }
+  }
+
+  .bttn-tag {
+    font-size: 0.8rem;
+  }
+}
