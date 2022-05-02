@@ -1,6 +1,6 @@
 import { FiArrowUpRight } from 'react-icons/fi';
 import {
-  FaLinkedinIn, FaTwitter, FaInstagram, FaAngellist,
+  FaLinkedinIn, FaTwitter, FaGithub, FaAngellist,
 } from 'react-icons/fa';
 import logo from '../assets/logo.svg';
 import lematLogo from '../assets/lematLogo.png';
@@ -57,18 +57,38 @@ function Footer() {
           </div>
         </form>
         <div className="footer--rrss" data-aos="fade-down">
-          <div className="rrss--icon">
+          <a
+            href="https://www.linkedin.com/in/alef-g/"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="rrss--icon"
+          >
             <FaLinkedinIn />
-          </div>
-          <div className="rrss--icon">
-            <FaTwitter />
-          </div>
-          <div className="rrss--icon">
-            <FaInstagram />
-          </div>
-          <div className="rrss--icon">
+          </a>
+          <a
+            href="https://github.com/alef-garrido"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="rrss--icon"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://angel.co/u/armando-garrido"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="rrss--icon"
+          >
             <FaAngellist />
-          </div>
+          </a>
+          <a
+            href="https://twitter.com/Alef_Garrido"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="rrss--icon"
+          >
+            <FaTwitter />
+          </a>
         </div>
       </div>
     </footer>
