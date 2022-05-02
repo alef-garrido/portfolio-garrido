@@ -61,8 +61,8 @@
     width: 100%;
     display: grid;
     padding: 0%;
-    grid-template-rows: 1fr 100px;
-    gap: 79vmax;
+    grid-template-rows: 1fr 100px 100px;
+    gap: 85vmax;
 
     .project-thumbnail-full img {
       width: 100%;
@@ -73,12 +73,15 @@
     .project-miniature {
       grid-row: 1 / 2;
       width: 70%;
+      height: 569px;
       padding: 1.5rem;
       margin-top: 29vmax;
       top: 100%;
       left: 50%;
       margin-right: -50%;
       transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
 
       .miniature--title {
         color: $primary-white;
