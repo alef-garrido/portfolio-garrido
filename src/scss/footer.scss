@@ -218,6 +218,7 @@
 
 @media screen and (min-width: 320px) and (max-width: 568px) {
   .footer--container {
+    /* stylelint-disable-next-line */
     height: clamp(185vmin, 180vmin, 182vmin);
     position: relative;
     display: flex;
@@ -278,6 +279,7 @@
   }
 
   .footer--form {
+    /* stylelint-disable-next-line */
     width: clamp(260px, 288px, 300px);
   }
 
