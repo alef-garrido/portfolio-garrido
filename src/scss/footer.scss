@@ -37,7 +37,7 @@
 }
 
 .footer-line-1 {
-  height: 24rem;
+  height: 44rem;
 }
 
 .footer-line-2 {
@@ -52,13 +52,13 @@
 
 .footer-line-left {
   left: 0;
-  height: 24rem;
+  height: 44rem;
 }
 
 .footer-line-right {
   right: 0;
   left: auto;
-  height: 24rem;
+  height: 44rem;
 }
 
 .footer-line-bottom {
@@ -213,5 +213,88 @@
 
   &:hover {
     border-color: #39d353;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 568px) {
+  .footer--container {
+    height: clamp(185vmin, 180vmin, 182vmin);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer--border {
+    left: 250px;
+  }
+
+  .footer-line-left {
+    height: 94rem;
+  }
+
+  .footer-line-right {
+    height: 94rem;
+  }
+
+  .footer--content {
+    width: 90%;
+  }
+
+  .footer--menu {
+    padding: 0;
+  }
+
+  .footer--disclaimer {
+    position: absolute;
+    bottom: 2rem;
+    margin-top: 2rem;
+    line-height: 105%;
+    letter-spacing: 2px;
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  .footer--disclaimer img {
+    margin-right: 0.9rem;
+    width: 17%;
+  }
+
+  .footer--contact {
+    position: absolute;
+    bottom: 13rem;
+  }
+
+  .contact--item {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .footer-line-1 {
+    height: 0;
+  }
+
+  .footer--form {
+    width: clamp(260px, 288px, 300px);
+  }
+
+  .footer--menu ul li {
+    margin-bottom: 0.5rem;
+
+    a {
+      font-weight: 600;
+    }
+  }
+
+  .footer--title {
+    font-size: 1.1rem;
+  }
+
+  .footer--rrss {
+    position: absolute;
+    bottom: 7rem;
   }
 }
