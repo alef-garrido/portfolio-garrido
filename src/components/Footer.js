@@ -1,10 +1,7 @@
-import { FiArrowUpRight } from 'react-icons/fi';
-import {
-  FaLinkedinIn, FaTwitter, FaGithub, FaAngellist,
-} from 'react-icons/fa';
 import logo from '../assets/logo.svg';
 import lematLogo from '../assets/lematLogo.png';
-
+import Form from './footer/Form';
+import Rss from './footer/Rss';
 import '../scss/footer.scss';
 
 function Footer() {
@@ -49,54 +46,8 @@ function Footer() {
         </div>
       </div>
       <div className="footer--form">
-        <h5 className="footer--title">NEWSLETTER</h5>
-        <form
-          name="contact"
-          method="post"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-          <input type="email" name="email" placeholder="Email address" />
-          <button
-            type="submit"
-            className="form--arrow"
-          >
-            <FiArrowUpRight />
-          </button>
-        </form>
-        <div className="footer--rrss">
-          <a
-            href="https://www.linkedin.com/in/alef-g/"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="rrss--icon"
-          >
-            <FaLinkedinIn />
-          </a>
-          <a
-            href="https://github.com/alef-garrido"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="rrss--icon"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="https://angel.co/u/armando-garrido"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="rrss--icon"
-          >
-            <FaAngellist />
-          </a>
-          <a
-            href="https://twitter.com/Alef_Garrido"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="rrss--icon"
-          >
-            <FaTwitter />
-          </a>
-        </div>
+        <Form />
+        <Rss />
       </div>
     </footer>
   );
