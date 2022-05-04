@@ -51,9 +51,10 @@ function Footer() {
       <div className="footer--form">
         <h5 className="footer--title">NEWSLETTER</h5>
         <form
-          action="https://formspree.io/f/mbjqkadw"
+          name="nslttrList"
           method="POST"
         >
+          <input type="hidden" name="form-name" value="nslttrList" />
           <input type="text" name="email" placeholder="Email address" />
           <button
             type="submit"
