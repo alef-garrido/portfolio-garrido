@@ -10,18 +10,18 @@ import '../scss/footer.scss';
 function Footer() {
   return (
     <footer id="footer" className="footer--container">
-      <div className="footer-lines footer--border" data-aos="fade-down">
-        <div className="footer-line footer-line-1" data-aos="fade-down" />
-        <div className="footer-line footer-line-2" data-aos="fade-left" />
-        <div className="footer-line footer-line-3" data-aos="fade-right" />
+      <div className="footer-lines footer--border">
+        <div className="footer-line footer-line-1" />
+        <div className="footer-line footer-line-2" />
+        <div className="footer-line footer-line-3" />
       </div>
-      <div className="footer-line footer-line-left" data-aos="fade-down" />
-      <div className="footer-line footer-line-right" data-aos="fade-down" />
+      <div className="footer-line footer-line-left" />
+      <div className="footer-line footer-line-right" />
       <div className="footer-line footer-line-bottom" />
       <div className="footer--content">
         <div className="footer--header">
-          <img src={logo} alt="site logo" data-aos="fade-down" />
-          <div className="footer--disclaimer" data-aos="fade-down">
+          <img src={logo} alt="site logo" />
+          <div className="footer--disclaimer">
             <img src={lematLogo} className="footer--logo" alt="brand logo" />
             <p>
               2022 alefLeMat&trade;
@@ -33,30 +33,36 @@ function Footer() {
       </div>
       <div className="footer--menu">
         <ul>
-          <li data-aos="fade-down">
+          <li>
             <a href="#home">Home</a>
           </li>
-          <li data-aos="fade-down">
+          <li>
             <a href="#about">About Me</a>
           </li>
-          <li data-aos="fade-down">
+          <li>
             <a href="#projects">Projects</a>
           </li>
         </ul>
-        <div className="footer--contact" data-aos="fade-down">
+        <div className="footer--contact">
           <p className="contact--item">Mx +52 449 560 5149</p>
           <p className="contact--item">info@alef-lemat.tech</p>
         </div>
       </div>
       <div className="footer--form">
-        <h5 className="footer--title" data-aos="fade-down">NEWSLETTER</h5>
-        <form data-aos="fade-down">
+        <h5 className="footer--title">NEWSLETTER</h5>
+        <form
+          action="https://formspree.io/f/mbjqkadw"
+          method="POST"
+        >
           <input type="text" name="email" placeholder="Email address" />
-          <div className="form--arrow">
+          <button
+            type="submit"
+            className="form--arrow"
+          >
             <FiArrowUpRight />
-          </div>
+          </button>
         </form>
-        <div className="footer--rrss" data-aos="fade-down">
+        <div className="footer--rrss">
           <a
             href="https://www.linkedin.com/in/alef-g/"
             target="_blank"

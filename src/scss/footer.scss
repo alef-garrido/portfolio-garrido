@@ -180,13 +180,17 @@
   }
 }
 
-.form--arrow * {
+.form--arrow {
+  background-color: transparent;
+  border: none;
+  color: $primary-white;
+  * {
   width: 1.7rem;
   height: auto;
   cursor: pointer;
   transition: all 500ms ease-in-out;
+  }
 }
-
 .rrss--icon * {
   width: 1.2rem;
   height: auto;
