@@ -1,5 +1,7 @@
 import '../scss/projects.scss';
-import { useState } from 'react';
+import 'aos/dist/aos.css';
+import Aos from 'aos';
+import { useState, useEffect } from 'react';
 import { SPAs } from '../data/projectsObj';
 import Tags from './projects/Tags';
 import Miniature from './projects/Miniature';
@@ -9,6 +11,7 @@ function Projects() {
     count: 0,
     assets: SPAs,
   });
+
   const project = index.assets[index.count];
   const previous = () => {
     setIndex((prevState) => ({
@@ -22,10 +25,13 @@ function Projects() {
       count: prevState.count + 1,
     }));
   };
+  useEffect(() => {
+    Aos.init({ duration: 500 });
+  }, []);
   return (
 
     <section id="projects" className="projects--content">
-      <div className="project-thumbnail-full">
+      <div className="project-thumbnail-full" data-aos="fade-down">
         <img alt="" src={project.cover} />
       </div>
       <Miniature
@@ -34,6 +40,7 @@ function Projects() {
         next={next}
         index={index.count}
         size={index.assets.length}
+        data-aos="fade-down"
       />
       <Tags />
     </section>
