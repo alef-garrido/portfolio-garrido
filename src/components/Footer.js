@@ -1,27 +1,24 @@
-import { FiArrowUpRight } from 'react-icons/fi';
-import {
-  FaLinkedinIn, FaTwitter, FaGithub, FaAngellist,
-} from 'react-icons/fa';
 import logo from '../assets/logo.svg';
 import lematLogo from '../assets/lematLogo.png';
-
+import Form from './footer/Form';
+import Rss from './footer/Rss';
 import '../scss/footer.scss';
 
 function Footer() {
   return (
     <footer id="footer" className="footer--container">
-      <div className="footer-lines footer--border" data-aos="fade-down">
-        <div className="footer-line footer-line-1" data-aos="fade-down" />
-        <div className="footer-line footer-line-2" data-aos="fade-left" />
-        <div className="footer-line footer-line-3" data-aos="fade-right" />
+      <div className="footer-lines footer--border">
+        <div className="footer-line footer-line-1" />
+        <div className="footer-line footer-line-2" />
+        <div className="footer-line footer-line-3" />
       </div>
-      <div className="footer-line footer-line-left" data-aos="fade-down" />
-      <div className="footer-line footer-line-right" data-aos="fade-down" />
+      <div className="footer-line footer-line-left" />
+      <div className="footer-line footer-line-right" />
       <div className="footer-line footer-line-bottom" />
       <div className="footer--content">
         <div className="footer--header">
-          <img src={logo} alt="site logo" data-aos="fade-down" />
-          <div className="footer--disclaimer" data-aos="fade-down">
+          <img src={logo} alt="site logo" />
+          <div className="footer--disclaimer">
             <img src={lematLogo} className="footer--logo" alt="brand logo" />
             <p>
               2022 alefLeMat&trade;
@@ -33,63 +30,24 @@ function Footer() {
       </div>
       <div className="footer--menu">
         <ul>
-          <li data-aos="fade-down">
+          <li>
             <a href="#home">Home</a>
           </li>
-          <li data-aos="fade-down">
+          <li>
             <a href="#about">About Me</a>
           </li>
-          <li data-aos="fade-down">
+          <li>
             <a href="#projects">Projects</a>
           </li>
         </ul>
-        <div className="footer--contact" data-aos="fade-down">
+        <div className="footer--contact">
           <p className="contact--item">Mx +52 449 560 5149</p>
           <p className="contact--item">info@alef-lemat.tech</p>
         </div>
       </div>
       <div className="footer--form">
-        <h5 className="footer--title" data-aos="fade-down">NEWSLETTER</h5>
-        <form data-aos="fade-down">
-          <input type="text" name="email" placeholder="Email address" />
-          <div className="form--arrow">
-            <FiArrowUpRight />
-          </div>
-        </form>
-        <div className="footer--rrss" data-aos="fade-down">
-          <a
-            href="https://www.linkedin.com/in/alef-g/"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="rrss--icon"
-          >
-            <FaLinkedinIn />
-          </a>
-          <a
-            href="https://github.com/alef-garrido"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="rrss--icon"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="https://angel.co/u/armando-garrido"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="rrss--icon"
-          >
-            <FaAngellist />
-          </a>
-          <a
-            href="https://twitter.com/Alef_Garrido"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="rrss--icon"
-          >
-            <FaTwitter />
-          </a>
-        </div>
+        <Form />
+        <Rss />
       </div>
     </footer>
   );
