@@ -51,11 +51,11 @@ function Footer() {
       <div className="footer--form">
         <h5 className="footer--title">NEWSLETTER</h5>
         <form
-          name="nslttrList"
-          method="POST"
+          name="contact"
+          method="post"
         >
-          <input type="hidden" name="form-name" value="nslttrList" />
-          <input type="text" name="email" placeholder="Email address" />
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="email" name="email" placeholder="Email address" />
           <button
             type="submit"
             className="form--arrow"

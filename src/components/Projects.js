@@ -24,7 +24,7 @@ function Projects() {
   };
   return (
 
-    <section className="projects--content">
+    <section id="projects" className="projects--content">
       <div className="project-thumbnail-full">
         <img alt="" src={project.cover} />
       </div>
