@@ -1,3 +1,6 @@
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+import Aos from 'aos';
 import logo from '../assets/logo.svg';
 import lematLogo from '../assets/lematLogo.png';
 import Form from './footer/Form';
@@ -5,8 +8,11 @@ import Rss from './footer/Rss';
 import '../scss/footer.scss';
 
 function Footer() {
+  useEffect(() => {
+    Aos.init({ duration: 500 });
+  }, []);
   return (
-    <footer id="footer" className="footer--container">
+    <footer id="footer" className="footer--container" data-aos="fade-up">
       <div className="footer-lines footer--border">
         <div className="footer-line footer-line-1" />
         <div className="footer-line footer-line-2" />
