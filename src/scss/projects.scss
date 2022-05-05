@@ -14,6 +14,7 @@
   .project-miniature {
     position: absolute;
     width: 42%;
+    height: 550px;
     top: 17vmax;
     right: 7rem;
     bottom: auto;
@@ -73,9 +74,9 @@
     .project-miniature {
       grid-row: 1 / 2;
       width: 70%;
-      height: 569px;
+      height: 550px;
       padding: 1.5rem;
-      margin-top: 29vmax;
+      margin-top: 24vmax;
       top: 100%;
       left: 50%;
       margin-right: -50%;
